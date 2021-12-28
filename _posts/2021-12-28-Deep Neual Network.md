@@ -15,7 +15,7 @@ title:  "심층 신경망(Deep Neual Network) 공부"
 
 ### 1.1.1 신경망 추론 전체 그림
 
-![1](/assets/images/DNN/1.png)
+![1](/assets/images/DNN/1.PNG)
 
 화살표에는 **가중치**가 존재하며, 그 가중치와 뉴런의 값을 각각 곱해서 그 합이 다음 뉴런의 입력으로 쓰인다.
 
