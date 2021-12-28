@@ -332,7 +332,7 @@ histogram_plot(df_clean["Band gap values Clean"].astype("float"))
 
 
     
-![png](output_11_0.png)
+![11_0](/assets/images/output_11_0.png)
     
 
 
@@ -350,7 +350,7 @@ sns.distplot(df_clean["Band gap values Clean"], color="green")
 
 
     
-![png](output_12_1.png)
+![12_1](/assets/images/output_12_1.png)
     
 
 
@@ -1639,7 +1639,7 @@ plot_corr(features_corr_df)
 
 
     
-![png](output_41_0.png)
+![41_0](/assets/images/output_41_0.png)
     
 
 
@@ -1676,7 +1676,7 @@ plot_corr(features_corr_df_update)
 
 
     
-![png](output_47_0.png)
+![47_0](/assets/images/output_47_0.png)
     
 
 
@@ -1712,7 +1712,7 @@ plt.show()
 
 
     
-![png](output_49_0.png)
+![49_0](/assets/images/output_49_0.png)
     
 
 
@@ -1961,7 +1961,7 @@ _ = plt.ylabel('Density')
 
 
     
-![png](output_59_0.png)
+![59_0](/assets/images/output_59_0.png)
     
 
 
@@ -2080,7 +2080,7 @@ print("r2 score:{:0.3f}, rmse:{:0.3f}".format(score, rmse))
 
 
     
-![png](output_73_1.png)
+![73_1](/assets/images/output_73_1.png)
     
 
 
@@ -2094,7 +2094,7 @@ parity_stats_side_by_side(y_train,Train_pred,y_test,
 
 
     
-![png](output_74_0.png)
+![74_0](/assets/images/output_74_0.png)
     
 
 
@@ -2197,7 +2197,7 @@ fig.tight_layout()
 
 
     
-![png](output_79_0.png)
+![79_0](/assets/images/output_79_0.png)
     
 
 
@@ -2270,7 +2270,7 @@ fig.tight_layout()
 
 
     
-![png](output_81_0.png)
+![81_0](/assets/images/output_81_0.png)
     
 
 
@@ -2404,7 +2404,7 @@ print("r2 score:{:0.3f}, rmse:{:0.3f}".format(score, rmse))
 
 
     
-![png](output_95_1.png)
+![95_1](/assets/images/output_95_1.png)
     
 
 
@@ -2424,7 +2424,7 @@ parity_stats_side_by_side(y_train,Train_pred,y_test,
 
 
     
-![png](output_97_0.png)
+![97_0](/assets/images/output_97_0.png)
     
 
 
@@ -2587,7 +2587,7 @@ fig.tight_layout()
 
 
     
-![png](output_102_0.png)
+![102_0](/assets/images/output_102_0.png)
     
 
 
@@ -2698,7 +2698,7 @@ print("r2 score:{:0.3f}, rmse:{:0.3f}".format(score, rmse))
 
 
     
-![png](output_115_1.png)
+![115_1](/assets/images/output_115_1.png)
     
 
 
@@ -2712,7 +2712,7 @@ parity_stats_side_by_side(y_train,Train_pred,y_test,
 
 
     
-![png](output_116_0.png)
+![116_0](/assets/images/output_116_0.png)
     
 
 
