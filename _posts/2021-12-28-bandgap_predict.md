@@ -1,5 +1,8 @@
 # chemicalFormula of Semiconductor Predict
-
+---
+layout: single
+title:  "반도체(화학식) bandgap 예측"
+---
 
 ```python
 import pandas as pd
