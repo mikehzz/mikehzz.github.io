@@ -23,7 +23,7 @@ title:  "심층 신경망(Deep Neual Network) 공부"
 
 신경망이 수행하는 계산 수식
 
-![2](/assets/images/DNN/2.png)
+![2](/assets/images/DNN/2.PNG)
 
 ```python
 import numpy as np
@@ -37,7 +37,7 @@ h = np.matmul(x,W1) + b1
 
 여기에 **비선형** 효과를 부여하는 것이 바로 활성화 함수이다.
 
-![3](/assets/images/DNN/3.png)
+![3](/assets/images/DNN/3.PNG)
 
 
 ```python
@@ -74,17 +74,17 @@ s의 형태 (10,3) - 각 데이터가 3차원 데이터로 변환(각 클래스�
 
 교차 엔트로피 오차(Cross Entropy Error)
 
-![4](/assets/images/DNN/4.png)
+![4](/assets/images/DNN/4.PNG)
 
 softmax - 확률 출력
 
-![5](/assets/images/DNN/5.png)
+![5](/assets/images/DNN/5.PNG)
 
 여기서 s는 score값 (score값이 높은 레이블이 target으로 예측할 확률이 높다)
 
 Croos Entropy Error - 확률, 정답 레이블 입력
 
-![6](/assets/images/DNN/6.png)
+![6](/assets/images/DNN/6.PNG)
 
 t_k - k번째 클래스에 해당하는 정답 레이블
 
@@ -125,7 +125,7 @@ Weight의 변화량에 따른 LOSS의 변화량을 계산한 다음
 
 무작위로 선택된 데이터에 대한 기울기를 이용한다.
 
-![7](/assets/images/DNN/7.png)
+![7](/assets/images/DNN/7.PNG)
 
 W - 갱신하는 가중치 매개변수
 
