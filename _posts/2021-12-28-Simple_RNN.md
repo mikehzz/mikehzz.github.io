@@ -28,7 +28,7 @@ plt.plot(data)
 
 
     
-![png](output_2_1.png)
+![2_1](assets/images/RNN/output_2_1.png)
     
 
 
@@ -49,7 +49,7 @@ plt.plot(data)
 
 
     
-![png](output_4_1.png)
+![4_1](assets/images/RNN/output_4_1.png)
     
 
 
@@ -142,6 +142,6 @@ plt.show()
 
 
     
-![png](output_20_0.png)
+![20_0](assets/images/RNN/output_20_0.png)
     
 
