@@ -1,3 +1,10 @@
+# chemicalFormula of Semiconductor Predict
+---
+layout: single
+title:  "RNN "
+---
+
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
