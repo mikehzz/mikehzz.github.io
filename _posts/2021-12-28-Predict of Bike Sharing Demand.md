@@ -1,5 +1,8 @@
 # RandomForest를 활용한 자전거 대여량 예측하기
-
+---
+layout: single
+title:  "RandomForest를 활용한 공용자전거 대여 예측 해보기"
+---
 
 ```python
 import numpy as np
@@ -600,7 +603,7 @@ bar_plot(df_train_eda, "second", ax=ax6)
 
 
     
-![png](output_24_0.png)
+![1](/assets/images/RF/output_24_0.png)
     
 
 
@@ -797,7 +800,7 @@ point_plot(df_train_eda, 'weather', ax=ax4)
 
 
     
-![png](output_31_0.png)
+![2](/assets/images/RF/output_31_0.png)
     
 
 
