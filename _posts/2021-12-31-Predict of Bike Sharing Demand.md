@@ -1,8 +1,9 @@
-# RandomForest를 활용한 자전거 대여량 예측하기
 ---
 layout: single
 title:  "RandomForest를 활용한 공용자전거 대여 예측 해보기"
 ---
+
+# RandomForest를 활용한 자전거 대여량 예측하기
 
 ```python
 import numpy as np
@@ -1668,3 +1669,36 @@ print("r2 score:{:0.3f}, rmsle:{:0.3f}".format(Score, Rmsle))
 
     r2 score:0.933, rmsle:0.361
     
+
+정리
+---
+
+- 데이터 가져오기(Kaggle)
+- EDA  
+1. data type 확인
+2. 결측치 확인
+3. datetime의 년,월,일,시간,분,초를 열에 추가해 시각화 및 분석 
+4. 연도별,월별,시간별에 따른 자전거 대여량 평균치 분석
+5. 시간대별 자전거 대여량 분석(근무일, 요일, 분기,날씨)
+- 데이터 전처리 및 가공  
+1. season, holiday, workingday, weather를 fillna로 backfill로 채움.
+2. temp, atemp, humidity, windspeed를 linear로 채움.
+3. count는 머신러닝모델을 활용해 예측
+- 데이터 학습 및 검증  
+1. 기존의 결측치가 없는 데이터를 학습 - RF
+2. GridSearchCV 함수를 활용해 최적의 parameter값 도출 및 학습
+3. r2 score : 0.933, rmsle : 0.361 도출
+
+한계점
+---
+
+- timestep이 없는 데이터의 결측치를 채우려다 보니 학습 score가 생각보다 높게 나오지 않음.
+- 결측치를 머신러닝 모델링을 통해 예측하는 것보다 0으로 채우는 것이 효율적일 수 있다고 생각함.
+
+배운점
+---
+
+- 시계열 데이터를 다룰 때 꼭 필요한 함수들을 알게 됨.  
+1. resample
+2. Asfreq
+- 결측치를 backfill, linear로 채울 수 있는 method를 배움.
