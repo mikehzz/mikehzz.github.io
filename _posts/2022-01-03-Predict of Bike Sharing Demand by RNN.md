@@ -1,3 +1,8 @@
+---
+layout: single
+title:  "RNN을 활용한 시계열 데이터 예측하기"
+---
+
 # RNN을 활용한 자전거 대여량(시계열 데이터) 예측
 
 ### 밑의 사이트에서 만든 데이터로 RNN 학습
@@ -73,19 +78,6 @@ df_train.head(3)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -165,19 +157,6 @@ df_test.head(3)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -252,19 +231,6 @@ df_submission.head(3)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -326,19 +292,6 @@ df_test.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -492,7 +445,7 @@ bar_plot(df_train, "second", ax=ax6)
 
 
     
-![png](output_18_0.png)
+![1](/assets/images/RNN_2/output_18_0.png)
     
 
 
@@ -550,7 +503,7 @@ point_plot(df_train, 'weather', ax=ax3)
 
 
     
-![png](output_23_0.png)
+![2](/assets/images/RNN_2/output_23_0.png)
     
 
 
@@ -590,7 +543,7 @@ dist_plot(df_train["windspeed"], ax=ax4)
 
 
     
-![png](output_29_0.png)
+![3](/assets/images/RNN_2/output_29_0.png)
     
 
 
@@ -654,7 +607,7 @@ sns.barplot(data=df_train, x="month", y="count")
 
 
     
-![png](output_37_1.png)
+![4](/assets/images/RNN_2/output_37_1.png)
     
 
 
@@ -703,7 +656,7 @@ sns.barplot(data=df_train, x="hour", y="count")
 
 
     
-![png](output_41_1.png)
+![5](/assets/images/RNN_2/output_41_1.png)
     
 
 
@@ -758,19 +711,6 @@ df_train.head(3)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1079,7 +1019,7 @@ plt.legend()
 
 
     
-![png](output_55_0.png)
+![6](/assets/images/RNN_2/output_55_0.png)
     
 
 
@@ -1103,7 +1043,7 @@ plt.show()
 
 
     
-![png](output_58_0.png)
+![7](/assets/images/RNN_2/output_58_0.png)
     
 
 
@@ -1193,7 +1133,7 @@ plt.legend()
 
 
     
-![png](output_62_1.png)
+![8](/assets/images/RNN_2/output_62_1.png)
     
 
 
@@ -1215,6 +1155,28 @@ plt.show()
 
 
     
-![png](output_64_0.png)
-    
+![9](/assets/images/RNN_2/output_64_0.png)
 
+정리
+---
+
+- 데이터 가져오기(Kaggle)
+- 데이터 scaling  
+1. temp, atemp, humidity, windspeed는 StandardScaler 
+2. year, month, hour는 각각 target에 영향을 주는 정도를 채움  
+- 학습 데이터 만들기   
+4. time step을 24시간으로 잡음 (즉, 하나의 input size는 2011-01-01 00:00:00~2011-01-02 00:00:00)
+5. train shape : (9825,24,11), test shape : (1071,24,11) 
+
+한계점
+---
+
+- 중간중간 비어있는 time_series를 머신러닝의 예측값으로 채우다 보니 정확한 데이터셋이 아니기 때문에 
+loss값이 생각보다 낮지 않았다.
+
+배운점
+---
+
+- RNN을 시계열 데이터로 학습 시켜 보면서 세심한 데이터 전처리가 필요하다는 것을 느낌.
+- SimpleRNN, LSTM 두 모델 적용해본 결과 생각보다 SimpleRNN의 성능도 많이 떨어지지 않음.
+- model의 파라미터값을 다양하게 조정
