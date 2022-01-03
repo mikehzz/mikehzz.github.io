@@ -1,10 +1,9 @@
-# deep neual network study
-
 ---
 layout: single
 title:  "심층 신경망(Deep Neual Network) 공부"
 ---
 
+# deep neual network study
 
 **이 글은 밑바닥부터 시작하는 딥러닝 2 책을 토대로 작성**
 
