@@ -1,9 +1,9 @@
-# chemicalFormula of Semiconductor Predict
 ---
-layout: single
+layout: page  
 title:  "반도체(화학식) bandgap 예측"
 ---
 
+# chemicalFormula of Semiconductor Predict
 ```python
 import pandas as pd
 import numpy as np
@@ -2582,4 +2582,29 @@ prediction("SiN", 4.57)
 </table>
 </div>
 
+정리
+---
 
+- 데이터 가져오기
+- 데이터 전처리 및 가공  
+1. get_composition 함수 사용 column 추가
+2. 필요없는 column 제거
+3. 상관계수가 높거나 표준편차가 0인 column 제거
+4. MinMaxScaler로 데이터 scale  
+- 데이터 학습
+1. X : 반도체 화학식에 대한 정보, y : bandgap
+2. X,y의 train,test 비율은 0.1
+3. 적절히 잘 분배되었는지 그래프화하여 비교
+4. GridSearchCV함수를 사용해 최적의 parameter값 도출 및 학습 - RF
+5. feature permutation 을 활용해 특성중요도가 제일 높은 20개 외의 열 제거 및 학습  
+- test셋 검증    
+test 검증 결과 r2 score : 0.883, rmse : 0.749 도출
+- def 함수 사용해 새로운 데이터(SiN 반도체) 예측 및 비교
+
+한계점
+---
+
+- 도메인 지식이 부족한 데이터 분석하는 데에 어려움이 있었음.
+- 처음 사용한 matminer, composition라는 라이브러리
+- 데이터 전처리를 하는 것에 상당한 시간을 쏟음.
+- 데이터 특성상 비효율적인 column이 많아 최대한 줄이고자 노력
