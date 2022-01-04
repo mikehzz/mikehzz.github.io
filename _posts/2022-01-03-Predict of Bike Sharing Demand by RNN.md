@@ -1,6 +1,13 @@
 ---
 layout: single
 title:  "RNN을 활용한 시계열 데이터 예측하기"
+
+categories:
+  - Project
+tags:
+  - RNN
+  - LSTM
+  - kaggle
 ---
 
 # RNN을 활용한 자전거 대여량(시계열 데이터) 예측
