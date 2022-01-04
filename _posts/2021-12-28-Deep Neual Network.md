@@ -1,14 +1,20 @@
 ---
 layout: single
-title:  "심층 신경망(Deep Neual Network) 공부"
+title:  "심층 신경망(Deep Neual Network)"  
+
+categories:
+  - 딥러닝 공부
+tags:
+  - 신경망 추론
+  - 손실함수
 ---
 
-# deep neual network study
 
 **이 글은 밑바닥부터 시작하는 딥러닝 2 책을 토대로 작성**
 
 [밑바닥부터 시작하는 딥러닝 2](https://github.com/WegraLee/deep-learning-from-scratch-2)
 
+***********
 1.1 신경망의 추론
 ---
 
