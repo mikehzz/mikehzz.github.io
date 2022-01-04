@@ -1,6 +1,12 @@
 ---
 layout: single
 title:  "RandomForest를 활용한 공용자전거 대여 예측 해보기"
+
+categories:
+  - Project
+tags:
+  - RandomForestRegressor
+  - kaggle
 ---
 
 # RandomForest를 활용한 자전거 대여량 예측하기
