@@ -2,6 +2,12 @@
 ---
 layout: single
 title:  "RNN "
+
+categories:
+  - 딥러닝 공부
+tags:
+  - SimpleRNN
+  - Deep Learning
 ---
 
 
