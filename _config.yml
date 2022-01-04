@@ -106,11 +106,11 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "machine/deep learning, Data Science"
   location         : "South Korea"
-  email            : procss2696@gmail.com
+  email            : # procss2696@gmail.com
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      #url: "mailto:procss2696@gmail.com"
+      url: "mailto:procss2696@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
