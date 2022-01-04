@@ -1,6 +1,14 @@
 ---
 layout: page  
 title:  "반도체(화학식) bandgap 예측"
+
+categories:
+  - Project
+tags:
+  - RandomForestRegressor
+  - ensemble
+  - chemicalFormula
+  - bandgap predict
 ---
 
 # chemicalFormula of Semiconductor Predict
