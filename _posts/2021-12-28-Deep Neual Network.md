@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "심층 신경망(Deep Neual Network)"  
+title:  "[딥러닝 2-1]심층 신경망(Deep Neual Network)"  
 
 categories:
   - 딥러닝 이론
