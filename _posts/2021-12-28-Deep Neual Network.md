@@ -3,7 +3,7 @@ layout: single
 title:  "심층 신경망(Deep Neual Network)"  
 
 categories:
-  - 딥러닝 공부
+  - 딥러닝 이론
 tags:
   - 신경망 추론
   - 손실함수
