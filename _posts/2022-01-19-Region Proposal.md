@@ -108,3 +108,5 @@ AP(Average Precision)을 계산해 보면
 다음 링크를 들어가면 Colab환경에서 Selective Search를 구현한 것을 확인 할 수 있다.
 
 [깃허브 링크](https://github.com/mikehzz/Computer_Vision/blob/main/selective_search_n_iou.ipynb)
+
+### 출처 : 인프런 "딥러닝 컴퓨터 비전"  
