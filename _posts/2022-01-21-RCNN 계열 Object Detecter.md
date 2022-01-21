@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "[Object Detection -3]RCNN 계열 Object Detecter(RCNN, SPPNet, Fast RCNN, Faster RCNN"
+title:  "[Object Detection -3]RCNN 모델(Region Proposal 기반)"
 
 categories:
   - Computer Vision
