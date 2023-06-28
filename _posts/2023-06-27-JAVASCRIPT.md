@@ -209,13 +209,32 @@ web.xml
 
 ### 쿠키의 구성
 
-이름 : 각각의 쿠키를 구별하는 데 사용되는 이름
-값 : 쿠키의 이름과 관련된 값
+이름 : 각각의 쿠키를 구별하는 데 사용되는 이름  
+값 : 쿠키의 이름과 관련된 값  
+유효시간 : 쿠키의 유지 시간  
+도메인 : 쿠키를 전송할 도메인  
+경로 : 쿠키를 전송할 요청 경로
 
+### 쿠키의 생성
+<%
+  Cookie cookie = new Cookie("이름", "값");
+  response.addCookie(cookie)
 
+%>
+한글 인코딩  
+URLEncoder.encode("홍길동","utf-8");
+### 쿠키 값 읽어오기
+<%
+  Cookie[] cookies = request.getCookies();
+  
+%>
+한글 디코딩  
+URLDecode.decode(cookies[0].getValue(),"utf-8");
+request
 
+### 쿠키 값 변경
 
-
+변경 메서드가 별도로 없음. 따라서 같은 이름으로 쿠키를 새로 생성하면 된다.
 
 
 
