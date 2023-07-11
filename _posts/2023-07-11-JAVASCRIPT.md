@@ -326,14 +326,171 @@ bt.onclick = function(event){
 
 
 
+### 자바스크립트 selector
 
+요소를 선택하기 위한 선택자(selector)
 
+1. getElementById
+```
+document.getElementByid() 메서드를 사용하여 id 기반으로 요소 선택
+ex) document.getElementById("username");
+```
 
+2. getElementByClassName()
+```
+document.getElementByClassName() 메서드를 사용하여 클래스 기반으로 요소 선택
+ex) document.getElementByClassName("usercClass");
+```
 
+3. getElementByTagName()
+```
+document.getElementByTagsName() 메서드를 사용하여 html태그 기반으로 요소 선택
+ex) document.getElementByTagName("div");
+```
+   
+4. querySelector() : css선택자를 기반으로 요소 선택
+```
+document.querySelector("#username") id기반 선택
+document.querySelector(".userClass") class기반 선택
+```
 
+### 브라우저와 관련된 객체
 
+BOM(Browser Object Model)  
+BOM에는 브라우저와 컴퓨터 스크린에 접근할 수 있는 객체의 모음.
 
+#### window객체  
+window객체는 웹 브라우저 전반적인 정보 취득이나 제어 등에 관련된 객체
 
+[22]
+
+|객체|설명|
+|--------|--------|
+|window|bom의 최상위 객체로, 각 프레임별로 하나씩 존재|
+|location|현재 URL에 대한 정보	|
+|screen|브라우저 외부 환경에 대한 정보	|
+|history|브라우저가 접근했던 URL history|
+|navigator|브라우저명 버전정보를 속성으로 가지고 있음.|
+|document|현재 문서에 대한 정보|
+
+### window open() 메서드
+
+open()메서드는 새로운 윈도우를 만들어 주는 메서드  
+window.open("문서주소",윈도이름,옵션=값,...);
+window.open("windowopen.html","window팝업",'width=400, height=600,menubar=no, status=no, toolbar=no');
+
+width : 팝업창 가로길이									
+height : 팝업창 세로길이									
+toolbar=no : 단축도구창(툴바) 표시안함									
+menubar=no : 메뉴창(메뉴바) 표시안함									
+location=no : 주소창 표시안함									
+scrollbars=no : 스크롤바 표시안함									
+status=no : 아래 상태바창 표시안함									
+resizable=no : 창변형 하지않음									
+fullscreen=no : 전체화면 하지않음									
+channelmode=yes : F11 키 기능이랑 같음									
+left=0 : 왼쪽에 창을 고정(ex. left=30 이런식으로 조절)									
+top=0 : 위쪽에 창을 고정(ex. top=100 이런식으로 조절)
+
+```java
+let popWindow ;
+window.onload = function(){
+
+	const btn = document.querySelector("#btn");
+	
+	btn.onclick = function(e){
+		console.log(`btn.onclick:${e}`);
+		//크롬,Edge: resizeable=no, scrollbars=0
+		
+		//window.open('tmp_menu.html','팝업','width=600, height=400, left=100, top=10, resizeable=no');
+		
+		//window.open('https://top.cafe.daum.net/pcwk','팝업','width=600, height=400, left=100, top=10');
+
+		//target:
+		//_blank : 팝업을 새창에서 연다(default)
+		//_self : 현재 페이지에 새창이 열린다.
+		//_parent : 부모창에서 팝업이 열린다.
+		//_top : 현재 페이지에서 최상의 페이지에 팝업이 열린다.
+		popWindow = window.open('tmp_menu.html','_blank','width=600, height=400, left=100, top=10, resizeable=no');
+		
+	}
+
+}
+
+function closePopup(){
+	popWindow.close();//팝업창 닫기
+	
+}
+```
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="/ehr/favicon.ico" >
+<title>자바스크립트</title>
+<script src="/ehr/resources/js/util.js"></script>
+</head>
+<body>
+     <h2>window.open():팝업</h2>
+     <hr/>
+     
+     <script src="/ehr/resources/js/ed03/js08.js"></script>
+     <button id="btn">팝업</button>
+     <button onclick="closePopup();">닫기</button>
+</body>
+</html>
+```
+
+### center popup
+
+1920*1080
+
+[23]
+
+```java
+	btn.onclick = function(e){
+		console.log(`btn.onclick:${e}`);
+		//크롬,Edge: resizeable=no, scrollbars=0
+		
+		//window.open('tmp_menu.html','팝업','width=600, height=400, left=100, top=10, resizeable=no');
+		
+		//window.open('https://top.cafe.daum.net/pcwk','팝업','width=600, height=400, left=100, top=10');
+		
+		//center popup
+		let screenWidth = window.screen.width;
+		let screenHeight = window.screen.height;
+		
+		let popupWidth = 600;
+		let popupHeight = 400;
+		
+		let leftValue = (screenWidth/2 - popupWidth/2);
+		let topValue = (screenHeight/2 - popupWidth/2);
+		console.log(`screenWidth : ${screenWidth}`);
+		console.log(`screenHeight : ${screenHeight}`);
+		
+		console.log(`leftValue : ${leftValue}`);
+		console.log(`topValue : ${topValue}`);
+
+		//target:
+		//_blank : 팝업을 새창에서 연다(default)
+		//_self : 현재 페이지에 새창이 열린다.
+		//_parent : 부모창에서 팝업이 열린다.
+		//_top : 현재 페이지에서 최상의 페이지에 팝업이 열린다.
+		//듀얼모니터는 left값이 달라 가운데 적용 않됨
+		popWindow = window.open('tmp_menu.html','_blank','width=600, height=400, left='+leftValue+",top="+340);
+		
+	}
+```
+
+### navigator
+브라우저 버전이나 브라우저명등의 정보를 담고 있는 객체
+
+|프로퍼티|설명|
+|----|-------|
+|프로퍼티|설명|
+|프로퍼티|설명|
 
 
 
